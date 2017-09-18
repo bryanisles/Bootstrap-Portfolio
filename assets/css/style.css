@@ -1,0 +1,141 @@
+/* .navbar-toggle {
+		border:none;
+} */
+
+* {
+	font-family: 'Cousine', monospace;
+}
+
+#coverPhoto {
+	position:relative;
+	display:block;
+	background-image: url("../images/cover.jpg");
+	filter:grayscale(1);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	height:250px;
+}
+
+.affix {
+	top:0;
+	width: 100%;
+	z-index: 9999 !important;
+	background-color:#555;
+	border:none;
+	/* color:ghostwhite; */
+}
+
+.affix li:hover {
+	background-color:ghostwhite;
+}
+
+.affix li:hover .navbar-nav {
+	color:ghostwhite;
+}
+
+.affix .navbar-nav li a, .affix .navbar-brand{
+	color:ghostwhite;
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	border-radius:0;
+}
+
+.affix ~ .container-fluid {
+	position: relative;
+	top:50px;
+}
+
+#coverPhoto:hover {
+	animation-name: hoverCover;
+	animation-duration: 1s;
+	filter:grayscale(0.25);
+	-webkit-filter:grayscale(0.25);
+}
+
+#coverPhoto:not(:hover) {
+	animation-name: notHoverCover;
+	animation-duration: 1s;
+	filter:grayscale(1);
+	-webkit-filter:grayscale(1);
+}
+
+@keyframes hoverCover {
+	0% {
+		filter:grayscale(1);
+		-webkit-filter:grayscale(1);
+	}
+	100% {
+		filter:grayscale(0.25);
+		-webkit-filter:grayscale(0.25);
+	}
+}
+
+@keyframes notHoverCover {
+	0% {
+		filter:grayscale(0.25);
+		-webkit-filter:grayscale(0.25);
+	}
+	100% {
+		filter:grayscale(1);
+		-webkit-filter:grayscale(1);
+	}
+}
+
+#myAside {
+	border-top-right-radius: 12.74% 20%;
+	line-height: 0;
+}
+
+#myAside:hover a {
+	cursor: pointer;
+}
+
+/* #myAside a:not(:last-child) {
+	margin-right:0.5%;
+} */
+
+
+#myAside a{
+	margin-top:0;
+	border-radius: 25%;
+	background-color:white;
+	padding:5px 8px 0 8px;
+	font-size:3em;
+	overflow:hidden;
+}
+
+#myAside a:link, #myAside a:visited {
+	color:#ddd;
+}
+
+#myAside a:hover {
+	background-color:white;
+	color:#555;
+	box-shadow: inset 0px 0px 0px 1px;
+}
+
+#myCont02 {
+	border-top:1px solid #ddd;
+	padding:5px 0;
+}
+
+@media screen and (min-width:768px) {
+	#coverPhoto {
+		background-position:50% 25%;
+	}	
+}
+
+@media screen and (min-width:980px) {
+	#coverPhoto {
+		background-position:50% 25%;
+	}	
+}
+
