@@ -108,12 +108,17 @@ hr {
 	}
 }
 
+
 @media screen and (max-width:768px) {
 	#myFixer {
 		height:75px;
 	}
 	#bodyContainer {
 		min-height:calc(100vh - 160px);
+	}
+	#myFam {
+		width: 200px;
+		height:200px;
 	}
 }
 
